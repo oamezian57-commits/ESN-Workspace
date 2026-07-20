@@ -1,20 +1,16 @@
+{ config, lib, pkgs, ... }:
 
-{ config, lib,  pkgs, ... }:
-
-
-let 
-	cfg = config.esn.app.browser;
-
+let
+  cfg = config.esn.apps.browser;
 in
 {
-	options.esn.apps.browser.enable =
-	  lib.mkEnableOption "ESN standaardbrowsers: Microsoft Edge en Google Chrome";
+  options.esn.apps.browser.enable =
+    lib.mkEnableOption "ESN standaardbrowsers: Microsoft Edge en Google Chrome";
 
-
-	comfig = lib.mkIf cfg.enable {
-	  environment.systemPackages = with pkgs; [
-	    microsoft-edge
-	    google-chrome
-	  ];
-	};
+  config = lib.mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [
+      microsoft-edge
+      google-chrome
+    ];
+  };
 }
