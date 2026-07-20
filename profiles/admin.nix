@@ -19,8 +19,7 @@
      ../modules/admin/recovery-tools.nix
 
 
-     ../modules/users
-
+     ../modules/users/admin.nix
    ];
 
 }
