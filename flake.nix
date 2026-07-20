@@ -1,32 +1,27 @@
 {
-	
-	description = "ESN-Workspace NixOS  configuration";
+  description = "ESN-Workspace NixOS configuration";
 
-		
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+  };
 
-	inputs = {
-	  
-		nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
-	};
+  outputs = { self, nixpkgs, ... }: {
+    nixosConfigurations = {
+      admin-laptop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
 
-	
-	outputs = { self, nixpkgs, ... }:
+        modules = [
+          ./hosts/admin-laptop/configuration.nix
+        ];
+      };
 
-		{
-		 
-		  nixosConfigurations.admin-laptop = nixpkgs.lib.nixosSystem {
-			
-			system = "x86_64-linux";
+      user-laptop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
 
-
-			modules = [
-				./hosts/admin-laptop/configuration.nix
-
-			
-				];
-				
-			};
-		
-		};
-
+        modules = [
+          ./hosts/user-laptop/configuration.nix
+        ];
+      };
+    };
+  };
 }
