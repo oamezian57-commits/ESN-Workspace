@@ -1,6 +1,6 @@
 {
 	
-	description = "DAWO-NixOS configuration";
+	description = "ESN-Workspace NixOS  configuration";
 
 		
 
