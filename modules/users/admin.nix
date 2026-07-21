@@ -3,7 +3,7 @@
 {
   users.users.admin = {
     isNormalUser = true;
-    description = "DAWO Administrator";
+    description = "ESN Administrator";
 
     extraGroups = [
       "wheel"
