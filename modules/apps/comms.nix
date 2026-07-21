@@ -8,7 +8,7 @@ in
     lib.mkEnableOption "ESN communicatiesoftware";
 
   config = lib.mkIf cfg.enable {
-	nixpkgs.config.allowUnfree = true;
+
 
 
     environment.systemPackages = with pkgs; [
