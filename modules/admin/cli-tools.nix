@@ -12,8 +12,6 @@
 	htop
 	fastfetch
 	tree
-	pciutils
-	usbutils
 	dnsutils
 	nmap
 	traceroute
