@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{config, lib, pkgs, ... }:
 
 let
   cfg = config.esn.apps.comms;
@@ -8,6 +8,9 @@ in
     lib.mkEnableOption "ESN communicatiesoftware";
 
   config = lib.mkIf cfg.enable {
+	nixpkgs.config.allowUnfree = true;
+
+
     environment.systemPackages = with pkgs; [
       teams-for-linux
       slack
