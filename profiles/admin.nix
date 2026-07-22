@@ -11,7 +11,7 @@
 
 	./common.nix
 
-
+     ../modules/apps/browser.nix
      ../modules/admin/cli-tools.nix
      ../modules/admin/networking-tools.nix
      ../modules/admin/hardware-tools.nix
@@ -21,6 +21,8 @@
 
      ../modules/users/admin.nix
    ];
+
+	esn.apps.browser.enable = true;
 
 }
 
