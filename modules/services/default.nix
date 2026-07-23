@@ -4,8 +4,7 @@
 
 { 
 
-  imports = [
-      ./ssh.nix   
+  imports = [ 
       ./firewall.nix
       ./bluetooth.nix
       ./audio.nix

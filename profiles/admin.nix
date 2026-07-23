@@ -10,7 +10,7 @@
   imports = [
 
 	./common.nix
-
+     ../modules/services/ssh.nix
      ../modules/apps/browser.nix
      ../modules/admin/cli-tools.nix
      ../modules/admin/networking-tools.nix
