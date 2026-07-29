@@ -45,10 +45,7 @@ Omar Amezian
     enable = true;
 
 
-    allowedTCPPorts = [
 
-       22 
-    ];
 
 
 
