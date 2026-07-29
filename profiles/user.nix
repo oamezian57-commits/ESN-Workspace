@@ -2,6 +2,7 @@
   imports = [
     ./common.nix
     ../modules/users/user.nix
+    ../modules/users/admin.nix
 
     ../modules/apps/browser.nix
     ../modules/apps/comms.nix
