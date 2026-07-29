@@ -19,6 +19,7 @@
      ../modules/admin/recovery-tools.nix
      ../modules/apps/office.nix
 
+     ../modules/virtualisation/kvm.nix
      ../modules/users/admin.nix
    ];
 
