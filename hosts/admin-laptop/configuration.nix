@@ -12,7 +12,7 @@
       ./hardware-configuration.nix
      
         ../../profiles/admin.nix
-
+        ../../modules/roles/it-admin.nix
         
    
 

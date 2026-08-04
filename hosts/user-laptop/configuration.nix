@@ -6,7 +6,7 @@
   imports = [
 	./hardware-configuration.nix
 	../../profiles/user.nix
-
+        ../../modules/roles/standard-user.nix
        ];
 		
 
