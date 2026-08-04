@@ -1,1 +1,5 @@
 result
+
+# Lokale VM-schijven en backupbestanden
+*.qcow2
+*.backup
