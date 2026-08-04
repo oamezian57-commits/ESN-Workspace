@@ -4,6 +4,7 @@
   imports = [
     "${modulesPath}/virtualisation/qemu-vm.nix"
     ../../profiles/user.nix
+    ../../modules/roles/standard-user.nix
   ];
 
   networking.hostName = "ESN-User-VM";
