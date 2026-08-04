@@ -25,6 +25,32 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/user-vm/configuration.nix
+
+        ];
+      };
+
+
+      finance-vm = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/user-vm/configuration.nix
+          ./modules/roles/finance.nix
+        ];
+      };
+
+      hr-vm = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/user-vm/configuration.nix
+          ./modules/roles/hr.nix
+        ];
+      };
+
+      management-vm = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/user-vm/configuration.nix
+          ./modules/roles/management.nix
         ];
       };
     };
