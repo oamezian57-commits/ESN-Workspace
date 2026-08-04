@@ -1,0 +1,7 @@
+{ ... }:
+
+{
+  imports = [
+    ./standard-user.nix
+  ];
+}
