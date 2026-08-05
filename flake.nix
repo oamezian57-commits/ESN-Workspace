@@ -25,7 +25,7 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/user-vm/configuration.nix
-
+          ./modules/roles/standard-user.nix
         ];
       };
 
