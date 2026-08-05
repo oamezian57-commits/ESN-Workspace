@@ -26,6 +26,7 @@
         modules = [
           ./hosts/user-vm/configuration.nix
           ./modules/roles/standard-user.nix
+          ./modules/policies/security.nix
         ];
       };
 
@@ -35,6 +36,7 @@
         modules = [
           ./hosts/user-vm/configuration.nix
           ./modules/roles/finance.nix
+          ./modules/policies/security.nix
         ];
       };
 
@@ -43,6 +45,7 @@
         modules = [
           ./hosts/user-vm/configuration.nix
           ./modules/roles/hr.nix
+          ./modules/policies/security.nix
         ];
       };
 
@@ -51,6 +54,7 @@
         modules = [
           ./hosts/user-vm/configuration.nix
           ./modules/roles/management.nix
+          ./modules/policies/security.nix
         ];
       };
     };
