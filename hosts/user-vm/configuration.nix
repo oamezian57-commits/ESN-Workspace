@@ -1,4 +1,4 @@
-{ modulesPath, ... }:
+{ modulesPath, lib, pkgs,  ... }:
 
 {
   imports = [
@@ -37,7 +37,27 @@
     ];
   };
 
-  users.users.user.initialPassword = "esn123";
+ users.users.user.initialPassword = "esn123";
+  
+ users.users.user.openssh.authorizedKeys.keys = [
+      "ssh-ed25519  AAAAC3NzaC1lZDI1NTE5AAAAIGDzqMR62EiXP5qL6HZ8JdFnucumlxcwL9Z7ZuuuXSGu"
+];
+
+  
+  users.users.admin.openssh.authorizedKeys.keys = [
+      "ssh-ed25519  AAAAC3NzaC1lZDI1NTE5AAAAIGDzqMR62EiXP5qL6HZ8JdFnucumlxcwL9Z7ZuuuXSGu"
+];
+
+  environment.etc."esn-deploy-test".text = "Remote deployment vanaf ESN-Admin werkt!";
+  
+  security.sudo.wheelNeedsPassword = lib.mkForce false;
+   
+  environment.systemPackages = with pkgs; [
+  htop
+];
+
+  boot.loader.grub.enable = lib.mkForce false;
+
 
   system.stateVersion = "26.05";
 }

@@ -12,7 +12,7 @@
       
        PasswordAuthentication = false;
        PermitRootLogin = "no";
-       AllowUsers = [ "admin" ];      
+       AllowUsers = [ "admin" "user" ];      
       };
     };
 }
