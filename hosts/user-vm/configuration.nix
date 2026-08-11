@@ -14,7 +14,15 @@
     cores = 4;
     diskSize = 20000;
     graphics = true;
-   
+
+
+    forwardPorts = [
+      {
+       from = "host";
+       host.port = 2222;
+       guest.port = 22;
+        }
+     ];   
 
     qemu.options = [
       "-audiodev pipewire,id=audio0"

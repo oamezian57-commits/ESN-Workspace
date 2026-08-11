@@ -21,6 +21,13 @@
         ];
       };
 
+      esn-test-laptop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+         modules = [
+           ./hosts/esn-test-laptop/configuration.nix
+        ];
+      };
+
       user-vm = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
