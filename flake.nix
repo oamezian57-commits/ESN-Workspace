@@ -25,6 +25,7 @@
         system = "x86_64-linux";
          modules = [
            ./hosts/esn-test-laptop/configuration.nix
+           ./modules/policies/security.nix
         ];
       };
 
