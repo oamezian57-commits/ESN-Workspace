@@ -5,6 +5,7 @@
   environment.systemPackages = with pkgs; [
 
 	git
+        just
 	curl	
 	wget
 	nano
