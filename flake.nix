@@ -6,6 +6,8 @@
   };
 
   outputs = { nixpkgs, ... }: {
+   nixosModules.esn-core = import ./profiles/user.nix;
+
     nixosConfigurations = {
       admin-laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
