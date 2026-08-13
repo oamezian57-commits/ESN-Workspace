@@ -10,10 +10,9 @@
     [ # Include the results of the hardware scan.
 
       ./hardware-configuration.nix
-     
-        ../../profiles/admin.nix
-        ../../modules/roles/it-admin.nix
-        
+      ../../profiles/admin.nix
+      ../../modules/roles/it-admin.nix
+      ../../modules/apps/comms.nix  
    
 
     ];
@@ -23,7 +22,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "ESN-Admin"; # Define your hostname.
-
+  esn.apps.comms.enable = true;
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
 
