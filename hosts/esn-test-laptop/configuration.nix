@@ -11,10 +11,21 @@
 		
 
 	networking.hostName = "esn-test-laptop";
+          services.comin = {
+              enable = true;
+              remotes = [
+                {
+                  name = "origin";
+                  url = "https://github.com/oamezian57-commits/ESN-Workspace.git";
+                  branches.main = {
+                      name = "main";
+                      operation = "boot";
+                    };
+                  }
+                ];
+              };
+	      system.stateVersion = "26.05";
 
-
-	system.stateVersion = "26.05";
-
- 	boot.loader.systemd-boot.enable = true;
-	boot.loader.efi.canTouchEfiVariables = true;
-}
+              boot.loader.systemd-boot.enable = true;
+	      boot.loader.efi.canTouchEfiVariables = true;
+            }

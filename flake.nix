@@ -3,9 +3,16 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    
+    comin = {
+      url = "github:nlewo/comin";
+      inputs.nixpkgs.follows = "nixpkgs";
+
+
+    };
   };
 
-  outputs = { nixpkgs, ... }: {
+  outputs = { nixpkgs, comin,  ... }: {
    nixosModules.esn-core = import ./profiles/user.nix;
 
     nixosConfigurations = {
@@ -13,6 +20,7 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/admin-laptop/configuration.nix
+          ./modules/policies/security.nix
         ];
       };
 
@@ -26,6 +34,7 @@
       esn-test-laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
          modules = [
+           comin.nixosModules.comin
            ./hosts/esn-test-laptop/configuration.nix
            ./modules/policies/security.nix
         ];
